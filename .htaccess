@@ -1,0 +1,34 @@
+RewriteEngine On
+RewriteRule ^Home/?$ Template.php
+RewriteRule ^StudentHangout/?$ StudentAcc.php
+RewriteRule ^IAmAuthorized/?$ StaffAcc.php
+RewriteRule ^WhosIt/([0-9]+)/([0-9]+)/?$ Studentinfo.php?gid=$1&sid=$2
+RewriteRule ^WhosIt/([0-9]+)/?$ Staffinfo.php?eid=$1
+RewriteRule ^Barracks/([0-9]+)/?$ Group.php?gid=$1
+RewriteRule ^TeamUp/?$ Creategroup.php
+RewriteRule ^Milestones/([0-9]+)/?$ Milestones.php?gid=$1
+RewriteRule ^MyVoiceIsHeard/([0-9]+)/?$ Forum.php?gid=$1
+RewriteRule ^SomeChanges/?$ Settings.php?
+RewriteRule ^Everyone/?$ Stafflist.php?
+RewriteRule ^Everykid/?$ Studentlist.php?
+
+RewriteRule ^AjaxRequest/(SR)/([A-Za-z0-9]+)/([0-9]+)/([A-Za-z0-9@._-]+)/?$ ALLAJAX.php?type=$1&grnum=$2&rnum=$3&email=$4
+RewriteRule ^AjaxRequest/(TR)/([A-Za-z0-9]+)/?$ ALLAJAX.php?type=$1&eid=$2
+RewriteRule ^AjaxRequest/(AUTH)/([0-9]+)/([^/]+)/([^/]+)/?$ ALLAJAX.php?type=$1&auth=$2&pass=$3&repass=$4
+RewriteRule ^AjaxRequest/(ASSIGN)/([0-9]+)/([0-9]+)/?$ ALLAJAX.php?type=$1&gid=$2&sid=$3
+RewriteRule ^AjaxRequest/(NAMERETURN)/([A-Za-z0-9]+)/([A-Za-z0-9]+)/([A-Za-z0-9]+)/?$ ALLAJAX.php?type=$1&gr1=$2&gr2=$3&gr3=$4
+RewriteRule ^AjaxRequest/(STONE)/([0-9]+)/([0-9]+)/?$ ALLAJAX.php?type=$1&grp=$2&sno=$3
+RewriteRule ^AjaxRequest/(LOGIN)/?$ ALLAJAX.php?type=$1
+RewriteRule ^AjaxRequest/(AUTHORIZE)/?$ ALLAJAX.php?type=$1
+RewriteRule ^AjaxRequest/(LOGOUT)/?$ ALLAJAX.php?type=$1
+RewriteRule ^AjaxRequest/(FORUMPOST)/([0-9]+)/?$ ALLAJAX.php?type=$1&gid=$2
+RewriteRule ^AjaxRequest/(LIVEFORUM)/([0-1])/?$ ALLAJAX.php?type=$1&live=$2
+RewriteRule ^AjaxRequest/(CHATS)/([0-9]+)/?$ ALLAJAX.php?type=$1&page=$2
+RewriteRule ^AjaxRequest/(GETFILE)/([0-9]+)/?$ ALLAJAX.php?type=$1&fileid=$2
+RewriteRule ^AjaxRequest/(DOWNLOADFILE)/([0-9]+)/?$ ALLAJAX.php?type=$1&fileid=$2
+RewriteRule ^AjaxRequest/(REMOVEFILE)/([0-9]+)/?$ ALLAJAX.php?type=$1&fileid=$2
+RewriteRule ^AjaxRequest/(UPLOADFILE)/?$ ALLAJAX.php?type=$1
+RewriteRule ^AjaxRequest/(LOADFILELIST)/([0-9]+)/?$ ALLAJAX.php?type=$1&gid=$2
+RewriteRule ^AjaxRequest/(UPLOADIMAGE)/?$ ALLAJAX.php?type=$1
+RewriteRule ^AjaxRequest/(MAKELEADER)/([0-9]+)/(0|1)/?$ ALLAJAX.php?type=$1&uid=$2&flag=$3
+RewriteRule ^AjaxRequest/(CHANGEPASS)/(0|1)/([0-9]+)/?$ ALLAJAX.php?type=$1&flag=$2&id=$3
