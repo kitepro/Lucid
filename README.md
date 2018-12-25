@@ -22,7 +22,7 @@ All the backend is written from scratch. No dependencies :D<br>
 All visuals and styles are handwritten. Sadly no Bootstrap CSS :(
 </i>
 <br><br>
-<i>Now this project is only here as a backup. Free hosting expired.</i>
+<i>Now this project is only here as a backup. Free hosting expired.</i><br><br>
 <strike>
 <i><b>Working version : http://lucid.hol.es</b></i>
 <p>Sample Student <br> Username : U1410072 <br>
